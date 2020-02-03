@@ -29,7 +29,7 @@ namespace MVCMySQLIdentity
         {
             // ###
             var test = Configuration.GetConnectionString("MysqlConnection");
-            services.AddDbContext<MysqlContext>((options => options.UseMySql(Configuration.GetConnectionString("MysqlConnection"))));
+            services.AddDbContext<MysqlContext>((options => options.UseMySQL(Configuration.GetConnectionString("MysqlConnection"))));
             services.AddIdentity<ApplicationUser, ApplicationRole>().AddEntityFrameworkStores<MysqlContext>().AddDefaultTokenProviders();
             // ###
             services.AddControllersWithViews();
